@@ -78,6 +78,11 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 浮起陰影 */
             border-radius: 4px;
             transition: transform 0.3s;
+            /* 預留高度，防止圖片載入時版面跳動 */
+            min-height: 200px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .img-frame:hover {
@@ -90,6 +95,9 @@
             height: auto;
             display: block;
             border: 1px solid #eee; /* 圖片本體淡淡的邊框 */
+            /* 確保圖片按比例縮放 */
+            aspect-ratio: 4/3; 
+            object-fit: cover;
         }
 
         /* 文字說明 */
@@ -133,7 +141,7 @@
         <div class="comp-card">
             <div class="comp-label" style="background:#555;">BEFORE 施工前</div>
             <div class="img-frame">
-                <img src="./yuyang-roof-demo-01.jpg" alt="施工前" class="step-img">
+                <img src="./yuyang-roof-demo-01.jpg" alt="施工前" class="step-img" decoding="async">
             </div>
             <p style="color:#666; font-size:0.9em; margin-top:10px;">現況斑駁、防水層失效</p>
         </div>
@@ -141,7 +149,7 @@
         <div class="comp-card">
             <div class="comp-label" style="background:#e63946;">AFTER 完工後</div>
             <div class="img-frame">
-                <img src="./yuyang-roof-demo-17.jpg" alt="完工後" class="step-img">
+                <img src="./yuyang-roof-demo-17.jpg" alt="完工後" class="step-img" decoding="async">
             </div>
             <p style="color:#666; font-size:0.9em; margin-top:10px;">防水層與水泥層，煥然一新</p>
         </div>
@@ -152,14 +160,15 @@
     <div class="process-grid">
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-02.jpg" alt="打除作業" class="step-img">
+            <img src="./yuyang-roof-demo-02.jpg" alt="打除作業" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 02</span>
                 <span class="step-title">打除作業</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-03.jpg" alt="打除至RC層" class="step-img">
+            <img src="./yuyang-roof-demo-03.jpg" alt="打除至RC層" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 03</span>
                 <span class="step-title">打除至RC層</span>
@@ -167,14 +176,15 @@
         </div>
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-04.jpg" alt="防水層刨除" class="step-img">
+            <img src="./yuyang-roof-demo-04.jpg" alt="防水層刨除" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 04</span>
                 <span class="step-title">舊防水層刨除</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-05.jpg" alt="RC層完整呈現" class="step-img">
+            <img src="./yuyang-roof-demo-05.jpg" alt="RC層完整呈現" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 05</span>
                 <span class="step-title">RC層完整呈現</span>
@@ -182,14 +192,15 @@
         </div>
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-06.jpg" alt="開始佈塗第一道防水底漆" class="step-img">
+            <img src="./yuyang-roof-demo-06.jpg" alt="開始佈塗第一道防水底漆" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 06</span>
                 <span class="step-title">開始佈塗第一道防水底漆</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-07.jpg" alt="佈塗第二道防水底漆" class="step-img">
+            <img src="./yuyang-roof-demo-07.jpg" alt="佈塗第二道防水底漆" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 07</span>
                 <span class="step-title">佈塗第二道防水底漆</span>
@@ -197,14 +208,15 @@
         </div>
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-08.jpg" alt="二道底漆完成" class="step-img">
+            <img src="./yuyang-roof-demo-08.jpg" alt="二道底漆完成" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 08</span>
                 <span class="step-title">二道底漆完成</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-09.jpg" alt="底漆乾後透明成膜" class="step-img">
+            <img src="./yuyang-roof-demo-09.jpg" alt="底漆乾後透明成膜" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 09</span>
                 <span class="step-title">底漆乾後透明成膜</span>
@@ -212,14 +224,15 @@
         </div>
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-10.jpg" alt="第一道彈性水泥" class="step-img">
+            <img src="./yuyang-roof-demo-10.jpg" alt="第一道彈性水泥" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 10</span>
                 <span class="step-title">開始佈塗第一道彈性水泥</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-11.jpg" alt="第一道彈性水泥" class="step-img">
+            <img src="./yuyang-roof-demo-11.jpg" alt="第一道彈性水泥" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 11</span>
                 <span class="step-title">第一道彈性水泥完工</span>
@@ -227,14 +240,15 @@
         </div>
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-12.jpg" alt="第二道彈性水泥" class="step-img">
+            <img src="./yuyang-roof-demo-12.jpg" alt="第二道彈性水泥" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 12</span>
                 <span class="step-title">第二道彈性水泥施工</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-13.jpg" alt="第二道彈性水泥" class="step-img">
+            <img src="./yuyang-roof-demo-13.jpg" alt="第二道彈性水泥" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 13</span>
                 <span class="step-title">第二道彈性水泥完工</span>
@@ -242,22 +256,23 @@
         </div>
 
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-14.jpg" alt="點焊鋼絲網" class="step-img">
+            <img src="./yuyang-roof-demo-14.jpg" alt="點焊鋼絲網" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 14</span>
                 <span class="step-title">鋪設點焊鋼絲網</span>
             </div>
         </div>
+
         <div class="img-frame">
-            <img src="./yuyang-roof-demo-15.jpg" alt="水泥砂漿回填" class="step-img">
+            <img src="./yuyang-roof-demo-15.jpg" alt="水泥砂漿回填" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 15</span>
-                <span class="step-title">水泥砂漿回填)</span>
+                <span class="step-title">水泥砂漿回填</span>
             </div>
         </div>
 
         <div class="img-frame" style="grid-column: 1 / -1;">
-            <img src="./yuyang-roof-demo-16.jpg" alt="水泥砂漿表面" class="step-img">
+            <img src="./yuyang-roof-demo-16.jpg" alt="水泥砂漿表面" class="step-img" loading="lazy">
             <div class="step-info">
                 <span class="step-num">STEP 16</span>
                 <span class="step-title">水泥砂漿表面完工</span>
@@ -269,11 +284,6 @@
 </div>
 
 <div class="footer">
-    &copy; 2026 昱揚工程有限公司 Yuyang Engineering
-</div>
-
-</body>
-</html>
     &copy; 2026 昱揚工程有限公司 Yuyang Engineering
 </div>
 
